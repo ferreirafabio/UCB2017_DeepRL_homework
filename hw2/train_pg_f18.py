@@ -261,8 +261,8 @@ class Agent(object):
 
         # We can also compute the logprob of the actions that were actually taken by the policy
         # This is used in the loss function.
-        """ sy_ac_na: placeholder for actions --> to compute a loss, we require the logprob of the action that the
-        agent took and compare it against the action the learned policy suggested 
+        """ sy_ac_na: placeholder for actions --> to compute a loss, we require the logprob of the action 
+        which was suggested by the policy and compare it against the sampled one's 
         --> difference (times Q) yields the loss"""
         self.sy_logprob_n = self.get_log_prob(self.policy_parameters, self.sy_ac_na)
 
